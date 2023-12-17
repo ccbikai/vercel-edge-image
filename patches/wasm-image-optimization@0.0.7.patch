@@ -1,0 +1,11 @@
+diff --git a/dist/workers/index.js b/dist/workers/index.js
+index e72fb07e39c9cacb68155dc6fe669d36163b5ad1..e626f66760c843a5709400d9e5cf8525dc471df1 100644
+--- a/dist/workers/index.js
++++ b/dist/workers/index.js
+@@ -1,5 +1,5 @@
+ import LibImage from './libImage.js';
+-import WASM from '../esm/libImage.wasm';
++import WASM from '../esm/libImage.wasm?module';
+ const libImage = LibImage({
+     instantiateWasm: async (imports, receiver) => {
+         receiver(await WebAssembly.instantiate(WASM, imports));

@@ -1,0 +1,23 @@
+{
+  "name": "image",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vercel dev",
+		"deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@silvia-odwyer/photon": "^0.3.2",
+    "query-string": "^8.1.0",
+    "wasm-image-optimization": "0.0.7"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@silvia-odwyer/photon@0.3.2": "patches/@silvia-odwyer__photon@0.3.2.patch",
+      "wasm-image-optimization@0.0.7": "patches/wasm-image-optimization@0.0.7.patch"
+    }
+  },
+  "devDependencies": {
+    "vercel": "^32.7.2"
+  }
+}
